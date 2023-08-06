@@ -9,6 +9,12 @@ final class AppCoordinator: CoordinatorProtocol {
         } else {
             self.window = nil
         }
+
+        let apiClient = StarWarsAPIClient()
+        Task {
+            let response: FilmListResponse = try await apiClient.fetch(endpoint: .films)
+            print(response)
+        }
         self.context = AppContext()
     }
 
