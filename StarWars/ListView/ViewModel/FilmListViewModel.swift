@@ -5,7 +5,7 @@ protocol FilmListViewModelDelegate: AnyObject {
 }
 
 @MainActor
-final class FilmListViewModel {
+final class FilmListViewModel: ListViewModelProtocol {
 
     init(context: AppContext) {
         self.starWarsService = context.starWarsService
@@ -23,7 +23,10 @@ final class FilmListViewModel {
         }
     }
 
+    // MARK: - ListViewModelProtocol
+
     let title: String = NSLocalizedString("star-wars", comment: "")
+    let allowsItemSelection: Bool = true
     var viewRepresentation: Observable<ListViewRepresentation> { $_viewRepresentation }
 
     func fetch() async {

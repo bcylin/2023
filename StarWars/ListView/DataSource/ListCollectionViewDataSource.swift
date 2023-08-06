@@ -4,6 +4,23 @@ import UIKit
 final class ListCollectionViewDataSource: UICollectionViewDiffableDataSource<Section, CellConfiguration> {
 
     typealias Snapshot = NSDiffableDataSourceSnapshot<Section, CellConfiguration>
+
+    convenience init(collectionView: UICollectionView, viewModel: ListViewModelProtocol) {
+        let cellRegistration = UICollectionView.CellRegistration<UICollectionViewListCell, CellConfiguration> { cell, indexPath, item in
+            var contentConfiguration = UIListContentConfiguration.subtitleCell()
+            contentConfiguration.text = item.title
+            contentConfiguration.secondaryText = item.subtitle
+            cell.contentConfiguration = contentConfiguration
+
+            if viewModel.allowsItemSelection {
+                cell.accessories = [.disclosureIndicator()]
+            }
+        }
+
+        self.init(collectionView: collectionView) { collectionView, indexPath, item in
+            return collectionView.dequeueConfiguredReusableCell(using: cellRegistration, for: indexPath, item: item)
+        }
+    }
 }
 
 /// The `SectionIdentifierType` used in the compositional list layout.

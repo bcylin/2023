@@ -12,10 +12,6 @@ final class AppCoordinator: CoordinatorProtocol {
 
         let apiClient = StarWarsAPIClient()
         self.context = AppContext(starWarsService: StarWarsService(apiClient: apiClient))
-        Task {
-            let response = try await context.starWarsService.fetchFilmList()
-            print(response)
-        }
     }
 
     let window: UIWindow?

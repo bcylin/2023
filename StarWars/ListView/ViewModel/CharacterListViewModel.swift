@@ -1,7 +1,7 @@
 import Foundation
 
 @MainActor
-final class CharacterListViewModel {
+final class CharacterListViewModel: ListViewModelProtocol {
 
     init(context: AppContext, film: Film) {
         self.film = film
@@ -20,7 +20,10 @@ final class CharacterListViewModel {
         }
     }
 
+    // MARK: - ListViewModelProtocol
+
     let title: String
+    let allowsItemSelection: Bool = false
     var viewRepresentation: Observable<ListViewRepresentation> { $_viewRepresentation }
 
     func fetch() async {
