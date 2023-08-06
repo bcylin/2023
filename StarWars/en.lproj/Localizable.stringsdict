@@ -2,6 +2,24 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>character-count</key>
+	<dict>
+		<key>NSStringLocalizedFormatKey</key>
+		<string>%#@number_of_characters@</string>
+		<key>number_of_characters</key>
+		<dict>
+			<key>NSStringFormatSpecTypeKey</key>
+			<string>NSStringPluralRuleType</string>
+			<key>NSStringFormatValueTypeKey</key>
+			<string>li</string>
+			<key>zero</key>
+			<string>0 character</string>
+			<key>one</key>
+			<string>1 character</string>
+			<key>other</key>
+			<string>%li characters</string>
+		</dict>
+	</dict>
 	<key>StringKey</key>
 	<dict>
 		<key>NSStringLocalizedFormatKey</key>

@@ -11,8 +11,6 @@
 		B522D52C2A7FD381000064D5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B522D52B2A7FD381000064D5 /* SceneDelegate.swift */; };
 		B522D5332A7FD382000064D5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B522D5322A7FD382000064D5 /* Assets.xcassets */; };
 		B522D5362A7FD382000064D5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B522D5342A7FD382000064D5 /* LaunchScreen.storyboard */; };
-		B5E4F9132A80181A004C118F /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = B5E4F9152A80181A004C118F /* Localizable.strings */; };
-		B5E4F9162A80181C004C118F /* Localizable.stringsdict in Resources */ = {isa = PBXBuildFile; fileRef = B5E4F9182A80181C004C118F /* Localizable.stringsdict */; };
 		B522D55B2A7FD4DC000064D5 /* CoordinatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B522D55A2A7FD4DC000064D5 /* CoordinatorProtocol.swift */; };
 		B522D55D2A7FD52D000064D5 /* AppContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = B522D55C2A7FD52D000064D5 /* AppContext.swift */; };
 		B522D55F2A7FD549000064D5 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B522D55E2A7FD549000064D5 /* AppCoordinator.swift */; };
@@ -28,6 +26,12 @@
 		B522D57B2A7FDDF9000064D5 /* DTO+Fake.swift in Sources */ = {isa = PBXBuildFile; fileRef = B522D57A2A7FDDF9000064D5 /* DTO+Fake.swift */; };
 		B522D57E2A7FDE12000064D5 /* StubStarWarsAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = B522D57D2A7FDE12000064D5 /* StubStarWarsAPIClient.swift */; };
 		B522D5812A7FDE2B000064D5 /* StarWarsServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B522D5802A7FDE2B000064D5 /* StarWarsServiceTests.swift */; };
+		B522D5852A7FE6B2000064D5 /* FilmListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B522D5842A7FE6B2000064D5 /* FilmListViewModel.swift */; };
+		B522D5882A7FE6DE000064D5 /* ListViewRepresentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = B522D5872A7FE6DE000064D5 /* ListViewRepresentation.swift */; };
+		B522D58A2A7FE702000064D5 /* ListCollectionViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = B522D5892A7FE702000064D5 /* ListCollectionViewDataSource.swift */; };
+		B522D58C2A7FE723000064D5 /* ListViewModelVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = B522D58B2A7FE723000064D5 /* ListViewModelVariables.swift */; };
+		B5E4F9132A80181A004C118F /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = B5E4F9152A80181A004C118F /* Localizable.strings */; };
+		B5E4F9162A80181C004C118F /* Localizable.stringsdict in Resources */ = {isa = PBXBuildFile; fileRef = B5E4F9182A80181C004C118F /* Localizable.stringsdict */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,8 +52,6 @@
 		B522D5352A7FD382000064D5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B522D5372A7FD382000064D5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B522D53C2A7FD382000064D5 /* StarWarsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StarWarsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		B5E4F9142A80181A004C118F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
-		B5E4F9172A80181C004C118F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.stringsdict; name = en; path = en.lproj/Localizable.stringsdict; sourceTree = "<group>"; };
 		B522D55A2A7FD4DC000064D5 /* CoordinatorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorProtocol.swift; sourceTree = "<group>"; };
 		B522D55C2A7FD52D000064D5 /* AppContext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppContext.swift; sourceTree = "<group>"; };
 		B522D55E2A7FD549000064D5 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
@@ -65,6 +67,12 @@
 		B522D57A2A7FDDF9000064D5 /* DTO+Fake.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DTO+Fake.swift"; sourceTree = "<group>"; };
 		B522D57D2A7FDE12000064D5 /* StubStarWarsAPIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StubStarWarsAPIClient.swift; sourceTree = "<group>"; };
 		B522D5802A7FDE2B000064D5 /* StarWarsServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarWarsServiceTests.swift; sourceTree = "<group>"; };
+		B522D5842A7FE6B2000064D5 /* FilmListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilmListViewModel.swift; sourceTree = "<group>"; };
+		B522D5872A7FE6DE000064D5 /* ListViewRepresentation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewRepresentation.swift; sourceTree = "<group>"; };
+		B522D5892A7FE702000064D5 /* ListCollectionViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListCollectionViewDataSource.swift; sourceTree = "<group>"; };
+		B522D58B2A7FE723000064D5 /* ListViewModelVariables.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewModelVariables.swift; sourceTree = "<group>"; };
+		B5E4F9142A80181A004C118F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		B5E4F9172A80181C004C118F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.stringsdict; name = en; path = en.lproj/Localizable.stringsdict; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +116,7 @@
 			children = (
 				B522D5622A7FD63A000064D5 /* API */,
 				B522D5592A7FD4CE000064D5 /* Coordinator */,
+				B522D5822A7FE694000064D5 /* ListView */,
 				B522D5722A7FDD57000064D5 /* Service */,
 				B522D5292A7FD381000064D5 /* AppDelegate.swift */,
 				B522D5322A7FD382000064D5 /* Assets.xcassets */,
@@ -209,6 +218,33 @@
 				B522D5802A7FDE2B000064D5 /* StarWarsServiceTests.swift */,
 			);
 			path = Service;
+			sourceTree = "<group>";
+		};
+		B522D5822A7FE694000064D5 /* ListView */ = {
+			isa = PBXGroup;
+			children = (
+				B522D5862A7FE6D8000064D5 /* DataSource */,
+				B522D5832A7FE6AA000064D5 /* ViewModel */,
+			);
+			path = ListView;
+			sourceTree = "<group>";
+		};
+		B522D5832A7FE6AA000064D5 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				B522D5842A7FE6B2000064D5 /* FilmListViewModel.swift */,
+				B522D58B2A7FE723000064D5 /* ListViewModelVariables.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		B522D5862A7FE6D8000064D5 /* DataSource */ = {
+			isa = PBXGroup;
+			children = (
+				B522D5892A7FE702000064D5 /* ListCollectionViewDataSource.swift */,
+				B522D5872A7FE6DE000064D5 /* ListViewRepresentation.swift */,
+			);
+			path = DataSource;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -321,7 +357,11 @@
 				B522D5772A7FDD79000064D5 /* Film.swift in Sources */,
 				B522D5652A7FD6C0000064D5 /* FilmDTO.swift in Sources */,
 				B522D5672A7FD6C7000064D5 /* FilmListResponse.swift in Sources */,
+				B522D5852A7FE6B2000064D5 /* FilmListViewModel.swift in Sources */,
 				B522D5612A7FD566000064D5 /* FilmsCoordinator.swift in Sources */,
+				B522D58A2A7FE702000064D5 /* ListCollectionViewDataSource.swift in Sources */,
+				B522D58C2A7FE723000064D5 /* ListViewModelVariables.swift in Sources */,
+				B522D5882A7FE6DE000064D5 /* ListViewRepresentation.swift in Sources */,
 				B522D5792A7FDD89000064D5 /* People.swift in Sources */,
 				B522D5692A7FD6CD000064D5 /* PeopleDTO.swift in Sources */,
 				B522D52C2A7FD381000064D5 /* SceneDelegate.swift in Sources */,
