@@ -38,6 +38,7 @@ final class ListViewController: UIViewController {
     }()
 
     private lazy var dataSource = ListCollectionViewDataSource(collectionView: collectionView, viewModel: viewModel)
+    private var errorViewController: ErrorViewController?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -88,13 +89,35 @@ final class ListViewController: UIViewController {
         let isInitialUpdate = dataSource.numberOfSections(in: collectionView) == 0
         dataSource.apply(viewRepresentation.snapshot, animatingDifferences: isInitialUpdate)
 
-        // TODO: show error
+        if let errorMessage = viewRepresentation.errorMessage {
+            let controller = errorViewController(with: errorMessage)
+            addChildViewController(controller)
+        }
+    }
+
+    private func errorViewController(with errorMessage: String) -> ErrorViewController {
+        // Defer creating the errorViewController until it's needed
+        let controller = errorViewController ?? createErrorViewController()
+        errorViewController = controller
+
+        controller.errorMessage = errorMessage
+        return controller
+    }
+
+    private func createErrorViewController() -> ErrorViewController {
+        let controller = ErrorViewController()
+        controller.delegate = self
+        controller.view.frame = view.bounds
+        controller.view.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+        return controller
     }
 
     @objc private func refetch() {
         fetchingTask = Task { [viewModel] in
             await viewModel.fetch()
         }
+        // The errorViewController should be nil if it's not displayed
+        errorViewController?.removeFromParentViewController()
     }
 }
 
@@ -108,5 +131,14 @@ extension ListViewController: UICollectionViewDelegate {
 
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         viewModel.selectItem(at: indexPath.item)
+    }
+}
+
+// MARK: - ErrorViewControllerDelegate
+
+extension ListViewController: ErrorViewControllerDelegate {
+
+    func errorViewControllerDidSelectRetry(_ controller: ErrorViewController) {
+        refetch()
     }
 }

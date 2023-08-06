@@ -6,3 +6,6 @@
 
 /* The error message when the API request fails. */
 "error-message" = "Cannot connect to Star Wars server";
+
+/* The title of the retry button below the error message. */
+"error-retry" = "Retry";
