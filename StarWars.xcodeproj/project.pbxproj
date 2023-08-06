@@ -32,6 +32,11 @@
 		B522D58C2A7FE723000064D5 /* ListViewModelVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = B522D58B2A7FE723000064D5 /* ListViewModelVariables.swift */; };
 		B5E4F9132A80181A004C118F /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = B5E4F9152A80181A004C118F /* Localizable.strings */; };
 		B5E4F9162A80181C004C118F /* Localizable.stringsdict in Resources */ = {isa = PBXBuildFile; fileRef = B5E4F9182A80181C004C118F /* Localizable.stringsdict */; };
+		B522D5932A7FE8D4000064D5 /* Observable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B522D5922A7FE8D4000064D5 /* Observable.swift */; };
+		B522D5962A7FE919000064D5 /* FilmListViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B522D5952A7FE919000064D5 /* FilmListViewModelTests.swift */; };
+		B522D5992A7FE931000064D5 /* MockFilmListViewModelDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B522D5982A7FE931000064D5 /* MockFilmListViewModelDelegate.swift */; };
+		B522D59B2A7FE946000064D5 /* StubStarWarsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B522D59A2A7FE946000064D5 /* StubStarWarsService.swift */; };
+		B522D59D2A7FE95B000064D5 /* Model+Fake.swift in Sources */ = {isa = PBXBuildFile; fileRef = B522D59C2A7FE95B000064D5 /* Model+Fake.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,6 +78,11 @@
 		B522D58B2A7FE723000064D5 /* ListViewModelVariables.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewModelVariables.swift; sourceTree = "<group>"; };
 		B5E4F9142A80181A004C118F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		B5E4F9172A80181C004C118F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.stringsdict; name = en; path = en.lproj/Localizable.stringsdict; sourceTree = "<group>"; };
+		B522D5922A7FE8D4000064D5 /* Observable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observable.swift; sourceTree = "<group>"; };
+		B522D5952A7FE919000064D5 /* FilmListViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilmListViewModelTests.swift; sourceTree = "<group>"; };
+		B522D5982A7FE931000064D5 /* MockFilmListViewModelDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockFilmListViewModelDelegate.swift; sourceTree = "<group>"; };
+		B522D59A2A7FE946000064D5 /* StubStarWarsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StubStarWarsService.swift; sourceTree = "<group>"; };
+		B522D59C2A7FE95B000064D5 /* Model+Fake.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Model+Fake.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,6 +126,7 @@
 			children = (
 				B522D5622A7FD63A000064D5 /* API */,
 				B522D5592A7FD4CE000064D5 /* Coordinator */,
+				B522D5912A7FE8C5000064D5 /* Helper */,
 				B522D5822A7FE694000064D5 /* ListView */,
 				B522D5722A7FDD57000064D5 /* Service */,
 				B522D5292A7FD381000064D5 /* AppDelegate.swift */,
@@ -134,6 +145,7 @@
 			children = (
 				B522D56E2A7FD723000064D5 /* Helper */,
 				B522D57F2A7FDE24000064D5 /* Service */,
+				B522D5942A7FE914000064D5 /* ViewModel */,
 			);
 			path = StarWarsTests;
 			sourceTree = "<group>";
@@ -173,6 +185,7 @@
 			isa = PBXGroup;
 			children = (
 				B522D56F2A7FD72A000064D5 /* Fake */,
+				B522D5972A7FE92D000064D5 /* Mock */,
 				B522D57C2A7FDE09000064D5 /* Stub */,
 			);
 			path = Helper;
@@ -182,6 +195,7 @@
 			isa = PBXGroup;
 			children = (
 				B522D57A2A7FDDF9000064D5 /* DTO+Fake.swift */,
+				B522D59C2A7FE95B000064D5 /* Model+Fake.swift */,
 			);
 			path = Fake;
 			sourceTree = "<group>";
@@ -208,6 +222,7 @@
 			isa = PBXGroup;
 			children = (
 				B522D57D2A7FDE12000064D5 /* StubStarWarsAPIClient.swift */,
+				B522D59A2A7FE946000064D5 /* StubStarWarsService.swift */,
 			);
 			path = Stub;
 			sourceTree = "<group>";
@@ -245,6 +260,30 @@
 				B522D5872A7FE6DE000064D5 /* ListViewRepresentation.swift */,
 			);
 			path = DataSource;
+			sourceTree = "<group>";
+		};
+		B522D5912A7FE8C5000064D5 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				B522D5922A7FE8D4000064D5 /* Observable.swift */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
+		B522D5942A7FE914000064D5 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				B522D5952A7FE919000064D5 /* FilmListViewModelTests.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		B522D5972A7FE92D000064D5 /* Mock */ = {
+			isa = PBXGroup;
+			children = (
+				B522D5982A7FE931000064D5 /* MockFilmListViewModelDelegate.swift */,
+			);
+			path = Mock;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -362,6 +401,7 @@
 				B522D58A2A7FE702000064D5 /* ListCollectionViewDataSource.swift in Sources */,
 				B522D58C2A7FE723000064D5 /* ListViewModelVariables.swift in Sources */,
 				B522D5882A7FE6DE000064D5 /* ListViewRepresentation.swift in Sources */,
+				B522D5932A7FE8D4000064D5 /* Observable.swift in Sources */,
 				B522D5792A7FDD89000064D5 /* People.swift in Sources */,
 				B522D5692A7FD6CD000064D5 /* PeopleDTO.swift in Sources */,
 				B522D52C2A7FD381000064D5 /* SceneDelegate.swift in Sources */,
@@ -376,8 +416,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				B522D57B2A7FDDF9000064D5 /* DTO+Fake.swift in Sources */,
+				B522D5962A7FE919000064D5 /* FilmListViewModelTests.swift in Sources */,
+				B522D5992A7FE931000064D5 /* MockFilmListViewModelDelegate.swift in Sources */,
+				B522D59D2A7FE95B000064D5 /* Model+Fake.swift in Sources */,
 				B522D5812A7FDE2B000064D5 /* StarWarsServiceTests.swift in Sources */,
 				B522D57E2A7FDE12000064D5 /* StubStarWarsAPIClient.swift in Sources */,
+				B522D59B2A7FE946000064D5 /* StubStarWarsService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

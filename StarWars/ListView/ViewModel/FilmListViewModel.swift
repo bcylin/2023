@@ -14,7 +14,7 @@ final class FilmListViewModel {
     weak var delegate: FilmListViewModelDelegate?
 
     private let starWarsService: StarWarsServiceProtocol
-    private var viewRepresentation = ListViewRepresentation()
+    @Observable private var _viewRepresentation = ListViewRepresentation()
 
     private var variables = ListViewModelVariables<Film>() {
         didSet {
@@ -24,6 +24,7 @@ final class FilmListViewModel {
     }
 
     let title: String = NSLocalizedString("star-wars", comment: "")
+    var viewRepresentation: Observable<ListViewRepresentation> { $_viewRepresentation }
 
     func fetch() async {
         guard variables.state != .loading else { return }
@@ -51,7 +52,7 @@ final class FilmListViewModel {
         snapshot.appendItems(variables.items.map(CellConfiguration.init(film:)), toSection: .main)
         viewRepresentation.snapshot = snapshot
 
-        self.viewRepresentation = viewRepresentation
+        self._viewRepresentation = viewRepresentation
     }
 }
 
