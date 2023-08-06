@@ -1,5 +1,8 @@
 /* The navigation bar title of the film list. */
 "star-wars" = "Star Wars";
 
+/* The subtitle of the character entry. */
+"character-birth-year" = "Birth year: %@";
+
 /* The error message when the API request fails. */
 "error-message" = "Cannot connect to Star Wars server";

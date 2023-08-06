@@ -37,6 +37,8 @@
 		B522D5992A7FE931000064D5 /* MockFilmListViewModelDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B522D5982A7FE931000064D5 /* MockFilmListViewModelDelegate.swift */; };
 		B522D59B2A7FE946000064D5 /* StubStarWarsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B522D59A2A7FE946000064D5 /* StubStarWarsService.swift */; };
 		B522D59D2A7FE95B000064D5 /* Model+Fake.swift in Sources */ = {isa = PBXBuildFile; fileRef = B522D59C2A7FE95B000064D5 /* Model+Fake.swift */; };
+		B522D59F2A7FF000000064D5 /* CharacterListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B522D59E2A7FF000000064D5 /* CharacterListViewModel.swift */; };
+		B522D5A12A7FF05C000064D5 /* CharacterListViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B522D5A02A7FF05C000064D5 /* CharacterListViewModelTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -83,6 +85,8 @@
 		B522D5982A7FE931000064D5 /* MockFilmListViewModelDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockFilmListViewModelDelegate.swift; sourceTree = "<group>"; };
 		B522D59A2A7FE946000064D5 /* StubStarWarsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StubStarWarsService.swift; sourceTree = "<group>"; };
 		B522D59C2A7FE95B000064D5 /* Model+Fake.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Model+Fake.swift"; sourceTree = "<group>"; };
+		B522D59E2A7FF000000064D5 /* CharacterListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterListViewModel.swift; sourceTree = "<group>"; };
+		B522D5A02A7FF05C000064D5 /* CharacterListViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterListViewModelTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -247,6 +251,7 @@
 		B522D5832A7FE6AA000064D5 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				B522D59E2A7FF000000064D5 /* CharacterListViewModel.swift */,
 				B522D5842A7FE6B2000064D5 /* FilmListViewModel.swift */,
 				B522D58B2A7FE723000064D5 /* ListViewModelVariables.swift */,
 			);
@@ -273,6 +278,7 @@
 		B522D5942A7FE914000064D5 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				B522D5A02A7FF05C000064D5 /* CharacterListViewModelTests.swift */,
 				B522D5952A7FE919000064D5 /* FilmListViewModelTests.swift */,
 			);
 			path = ViewModel;
@@ -392,6 +398,7 @@
 				B522D55D2A7FD52D000064D5 /* AppContext.swift in Sources */,
 				B522D55F2A7FD549000064D5 /* AppCoordinator.swift in Sources */,
 				B522D52A2A7FD381000064D5 /* AppDelegate.swift in Sources */,
+				B522D59F2A7FF000000064D5 /* CharacterListViewModel.swift in Sources */,
 				B522D55B2A7FD4DC000064D5 /* CoordinatorProtocol.swift in Sources */,
 				B522D5772A7FDD79000064D5 /* Film.swift in Sources */,
 				B522D5652A7FD6C0000064D5 /* FilmDTO.swift in Sources */,
@@ -415,6 +422,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B522D5A12A7FF05C000064D5 /* CharacterListViewModelTests.swift in Sources */,
 				B522D57B2A7FDDF9000064D5 /* DTO+Fake.swift in Sources */,
 				B522D5962A7FE919000064D5 /* FilmListViewModelTests.swift in Sources */,
 				B522D5992A7FE931000064D5 /* MockFilmListViewModelDelegate.swift in Sources */,
